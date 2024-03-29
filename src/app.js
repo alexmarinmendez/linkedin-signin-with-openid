@@ -6,7 +6,7 @@ import secretRouter from './routers/secret.router.js'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const app = express()
+export const app = express()
 
 app.use(session({
     secret: 'signin-auth-4-nc',
