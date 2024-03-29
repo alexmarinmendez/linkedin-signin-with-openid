@@ -2,7 +2,7 @@
   "name": "linkedin-signin-with-openid",
   "version": "1.0.0",
   "description": "A Sign In with LinkedIn using OpenID Connect Test using Nodejs",
-  "main": "src/app.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node .",
