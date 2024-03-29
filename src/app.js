@@ -16,7 +16,7 @@ app.use(session({
 
 app.use(express.static('/public'))
 app.engine('handlebars', handlebars.engine())
-app.set('views', '/views')
+app.set('views', path.join(__dirname, '..', 'views'))
 app.set('view engine', 'handlebars')
 
 app.get('/', (req, res, next) => {
