@@ -1,6 +1,8 @@
 import express from 'express'
 import handlebars from 'express-handlebars'
 import session from 'express-session'
+import path from 'path'
+
 import linkedinRouter from './routers/linkedin.router.js'
 import secretRouter from './routers/secret.router.js'
 import dotenv from 'dotenv'
