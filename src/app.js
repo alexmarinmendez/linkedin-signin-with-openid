@@ -1,7 +1,9 @@
 import express from 'express'
 import handlebars from 'express-handlebars'
 import session from 'express-session'
-import path from 'path'
+import { dirname } from 'path'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 import linkedinRouter from './routers/linkedin.router.js'
 import secretRouter from './routers/secret.router.js'
@@ -16,9 +18,9 @@ app.use(session({
     saveUninitialized: true
 }))
 
-app.use(express.static('/public'))
+app.use(express.static(__dirname + "/public"))
 app.engine('handlebars', handlebars.engine())
-app.set('views', path.join(__dirname, '..', 'views'))
+app.set('views', path.join(__dirname + "/views"))
 app.set('view engine', 'handlebars')
 
 app.get('/', (req, res, next) => {
